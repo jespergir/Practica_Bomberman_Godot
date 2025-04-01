@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://1oyqg5ievuu"]
+
+[ext_resource type="PackedScene" uid="uid://dxpal0ca84mdw" path="res://MainCharacter/main_character.tscn" id="1_qqetk"]
+
+[node name="EscenaTest" type="Node2D"]
+
+[node name="MainCharacter" parent="." instance=ExtResource("1_qqetk")]
+position = Vector2(265, 178)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -10.0
+offset_top = -11.0
+offset_right = 586.0
+offset_bottom = 338.0
+color = Color(0.290196, 0.439216, 1, 1)
+metadata/_edit_lock_ = true
