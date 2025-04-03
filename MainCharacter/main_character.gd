@@ -69,3 +69,8 @@ func move_by_tween(next_position : Vector2):
 
 func end_of_tween():
 	moving = false;
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("bomba"):
+		print("ma ha dado la bomba")
