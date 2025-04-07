@@ -1,17 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://1oyqg5ievuu"]
+[gd_scene load_steps=7 format=3 uid="uid://1oyqg5ievuu"]
 
 [ext_resource type="PackedScene" uid="uid://dxpal0ca84mdw" path="res://MainCharacter/main_character.tscn" id="1_qqetk"]
+[ext_resource type="PackedScene" uid="uid://cm43po0tagv2o" path="res://Walls/level_limits.tscn" id="2_15tsu"]
+[ext_resource type="PackedScene" uid="uid://dntga6p7qjaif" path="res://Walls/WoodBox/wood_box.tscn" id="3_rgy10"]
+[ext_resource type="PackedScene" uid="uid://me4ogq1phmcc" path="res://Background/background.tscn" id="4_pawgb"]
+[ext_resource type="PackedScene" uid="uid://cb3guc5iexq60" path="res://Header/header.tscn" id="5_8fa3n"]
+[ext_resource type="PackedScene" uid="uid://b0q8fkhewytsm" path="res://Walls/Fixed/wall_1.tscn" id="6_8fa3n"]
 
 [node name="EscenaTest" type="Node2D"]
 
+[node name="Header" parent="." instance=ExtResource("5_8fa3n")]
+
+[node name="Background" parent="." instance=ExtResource("4_pawgb")]
+
 [node name="MainCharacter" parent="." instance=ExtResource("1_qqetk")]
-position = Vector2(265, 178)
+position = Vector2(48, 112)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -10.0
-offset_top = -11.0
-offset_right = 586.0
-offset_bottom = 338.0
+offset_right = 576.0
+offset_bottom = 320.0
 color = Color(0.290196, 0.439216, 1, 1)
 metadata/_edit_lock_ = true
+
+[node name="LevelLimits" parent="." instance=ExtResource("2_15tsu")]
+
+[node name="WoodBox" parent="." instance=ExtResource("3_rgy10")]
+position = Vector2(80, 112)
+
+[node name="WoodBox2" parent="." instance=ExtResource("3_rgy10")]
+position = Vector2(48, 208)
+
+[node name="WoodBox3" parent="." instance=ExtResource("3_rgy10")]
+position = Vector2(112, 176)
+
+[node name="FixedWalls" type="Node2D" parent="."]
+
+[node name="Wall1" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(80, 144)
+
+[node name="Wall2" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(80, 208)
+
+[node name="Wall3" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(80, 272)
+
+[node name="Wall4" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(112, 272)
+
+[node name="Wall5" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(144, 240)
+
+[node name="Wall6" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(144, 144)
+
+[node name="Wall7" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(176, 144)
+
+[node name="Wall8" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(176, 176)
+
+[node name="WoodBox4" parent="." instance=ExtResource("3_rgy10")]
+position = Vector2(112, 240)
+
+[node name="WoodBox5" parent="." instance=ExtResource("3_rgy10")]
+position = Vector2(144, 112)
