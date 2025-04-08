@@ -27,6 +27,8 @@ window/stretch/mode="viewport"
 
 bomba=""
 personaje=""
+pickable_bomb=""
+pickable_key=""
 
 [input]
 

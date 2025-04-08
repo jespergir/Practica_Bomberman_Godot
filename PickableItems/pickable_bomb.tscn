@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://dirbwyj2jcxkk"]
+
+[ext_resource type="Texture2D" uid="uid://bymb32u81brl4" path="res://Assets/Items/dynamite-pack6.png" id="1_57l8m"]
+[ext_resource type="Script" uid="uid://d2wuo1a1bwe3p" path="res://PickableItems/pickable_items.gd" id="1_bxq00"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxq00"]
+size = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_723q7"]
+atlas = ExtResource("1_57l8m")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0piyf"]
+atlas = ExtResource("1_57l8m")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh333"]
+atlas = ExtResource("1_57l8m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1jea"]
+atlas = ExtResource("1_57l8m")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3gcf"]
+atlas = ExtResource("1_57l8m")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gqby"]
+atlas = ExtResource("1_57l8m")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lukj4"]
+atlas = ExtResource("1_57l8m")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o2xm"]
+atlas = ExtResource("1_57l8m")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hwfqx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_723q7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0piyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh333")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1jea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3gcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gqby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lukj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2o2xm")
+}],
+"loop": true,
+"name": &"bounce",
+"speed": 6.0
+}]
+
+[node name="PickableBomb" type="Area2D" groups=["pickable_bomb"]]
+script = ExtResource("1_bxq00")
+metadata/_custom_type_script = "uid://d2wuo1a1bwe3p"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bxq00")
+
+[node name="animacion" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hwfqx")
+animation = &"bounce"
+frame_progress = 0.919145

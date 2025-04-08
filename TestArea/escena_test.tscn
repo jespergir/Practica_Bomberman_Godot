@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://1oyqg5ievuu"]
+[gd_scene load_steps=9 format=3 uid="uid://1oyqg5ievuu"]
 
 [ext_resource type="PackedScene" uid="uid://dxpal0ca84mdw" path="res://MainCharacter/main_character.tscn" id="1_qqetk"]
 [ext_resource type="PackedScene" uid="uid://cm43po0tagv2o" path="res://Walls/level_limits.tscn" id="2_15tsu"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://me4ogq1phmcc" path="res://Background/background.tscn" id="4_pawgb"]
 [ext_resource type="PackedScene" uid="uid://cb3guc5iexq60" path="res://Header/header.tscn" id="5_8fa3n"]
 [ext_resource type="PackedScene" uid="uid://b0q8fkhewytsm" path="res://Walls/Fixed/wall_1.tscn" id="6_8fa3n"]
+[ext_resource type="PackedScene" uid="uid://dirbwyj2jcxkk" path="res://PickableItems/pickable_bomb.tscn" id="6_usjm3"]
+[ext_resource type="PackedScene" uid="uid://ci55hlcrkefa5" path="res://PickableItems/pickable_key.tscn" id="7_2lqgm"]
 
 [node name="EscenaTest" type="Node2D"]
 
@@ -25,14 +27,8 @@ metadata/_edit_lock_ = true
 
 [node name="LevelLimits" parent="." instance=ExtResource("2_15tsu")]
 
-[node name="WoodBox" parent="." instance=ExtResource("3_rgy10")]
-position = Vector2(80, 112)
-
-[node name="WoodBox2" parent="." instance=ExtResource("3_rgy10")]
-position = Vector2(48, 208)
-
-[node name="WoodBox3" parent="." instance=ExtResource("3_rgy10")]
-position = Vector2(112, 176)
+[node name="Wall49" parent="LevelLimits" instance=ExtResource("6_8fa3n")]
+position = Vector2(208, 208)
 
 [node name="FixedWalls" type="Node2D" parent="."]
 
@@ -46,7 +42,7 @@ position = Vector2(80, 208)
 position = Vector2(80, 272)
 
 [node name="Wall4" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
-position = Vector2(112, 272)
+position = Vector2(400, 176)
 
 [node name="Wall5" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
 position = Vector2(144, 240)
@@ -58,10 +54,102 @@ position = Vector2(144, 144)
 position = Vector2(176, 144)
 
 [node name="Wall8" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
-position = Vector2(176, 176)
+position = Vector2(336, 144)
 
-[node name="WoodBox4" parent="." instance=ExtResource("3_rgy10")]
-position = Vector2(112, 240)
+[node name="Wall9" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(432, 272)
 
-[node name="WoodBox5" parent="." instance=ExtResource("3_rgy10")]
-position = Vector2(144, 112)
+[node name="Wall10" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(208, 240)
+
+[node name="Wall11" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(240, 112)
+
+[node name="Wall12" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(272, 176)
+
+[node name="Wall13" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(304, 144)
+
+[node name="Wall14" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(336, 208)
+
+[node name="Wall15" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(272, 240)
+
+[node name="Wall16" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(432, 144)
+
+[node name="Wall17" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(464, 176)
+
+[node name="Wall18" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(496, 208)
+
+[node name="Wall19" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(400, 240)
+
+[node name="Wall20" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(144, 176)
+
+[node name="Wall21" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
+position = Vector2(144, 144)
+
+[node name="PickableBomb" parent="FixedWalls" instance=ExtResource("6_usjm3")]
+position = Vector2(48, 272)
+
+[node name="PickableKey" parent="FixedWalls" instance=ExtResource("7_2lqgm")]
+position = Vector2(144, 208)
+
+[node name="WoodBoxes" type="Node2D" parent="."]
+
+[node name="WoodBox" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(112, 112)
+
+[node name="WoodBox2" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(80, 176)
+
+[node name="WoodBox3" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(80, 240)
+
+[node name="WoodBox4" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(144, 272)
+
+[node name="WoodBox5" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(208, 112)
+
+[node name="WoodBox6" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(208, 176)
+
+[node name="WoodBox7" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(272, 112)
+
+[node name="WoodBox8" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(272, 208)
+
+[node name="WoodBox9" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(272, 272)
+
+[node name="WoodBox10" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(208, 272)
+
+[node name="WoodBox11" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(368, 112)
+
+[node name="WoodBox12" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(368, 176)
+
+[node name="WoodBox13" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(368, 240)
+
+[node name="WoodBox14" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(464, 112)
+
+[node name="WoodBox15" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(464, 240)
+
+[node name="WoodBox16" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(528, 176)
+
+[node name="WoodBox17" parent="WoodBoxes" instance=ExtResource("3_rgy10")]
+position = Vector2(528, 240)
