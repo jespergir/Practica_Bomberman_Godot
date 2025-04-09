@@ -233,7 +233,7 @@ libraries = {
 }
 speed_scale = 2.0
 
-[node name="AreaDamage" type="Area2D" parent="." groups=["bomba"]]
+[node name="AreaDamage" type="Area2D" parent="." groups=["bomb"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaDamage"]
 polygon = PackedVector2Array(16, -16, 48, -16, 48, 16, 16, 16, 16, 48, -16, 48, -16, 16, -48, 16, -48, -16, -16, -16, -16, -48, 16, -48)

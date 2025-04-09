@@ -1,15 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://1oyqg5ievuu"]
+[gd_scene load_steps=8 format=3 uid="uid://1oyqg5ievuu"]
 
+[ext_resource type="Script" uid="uid://64dq3xtwmcdy" path="res://TestArea/escena_test.gd" id="1_4nhj1"]
 [ext_resource type="PackedScene" uid="uid://dxpal0ca84mdw" path="res://MainCharacter/main_character.tscn" id="1_qqetk"]
 [ext_resource type="PackedScene" uid="uid://cm43po0tagv2o" path="res://Walls/level_limits.tscn" id="2_15tsu"]
 [ext_resource type="PackedScene" uid="uid://dntga6p7qjaif" path="res://Walls/WoodBox/wood_box.tscn" id="3_rgy10"]
 [ext_resource type="PackedScene" uid="uid://me4ogq1phmcc" path="res://Background/background.tscn" id="4_pawgb"]
 [ext_resource type="PackedScene" uid="uid://cb3guc5iexq60" path="res://Header/header.tscn" id="5_8fa3n"]
 [ext_resource type="PackedScene" uid="uid://b0q8fkhewytsm" path="res://Walls/Fixed/wall_1.tscn" id="6_8fa3n"]
-[ext_resource type="PackedScene" uid="uid://dirbwyj2jcxkk" path="res://PickableItems/pickable_bomb.tscn" id="6_usjm3"]
-[ext_resource type="PackedScene" uid="uid://ci55hlcrkefa5" path="res://PickableItems/pickable_key.tscn" id="7_2lqgm"]
 
-[node name="EscenaTest" type="Node2D"]
+[node name="EscenaTest" type="Node2D" groups=["level"]]
+script = ExtResource("1_4nhj1")
 
 [node name="Header" parent="." instance=ExtResource("5_8fa3n")]
 
@@ -94,12 +94,6 @@ position = Vector2(144, 176)
 
 [node name="Wall21" parent="FixedWalls" instance=ExtResource("6_8fa3n")]
 position = Vector2(144, 144)
-
-[node name="PickableBomb" parent="FixedWalls" instance=ExtResource("6_usjm3")]
-position = Vector2(48, 272)
-
-[node name="PickableKey" parent="FixedWalls" instance=ExtResource("7_2lqgm")]
-position = Vector2(144, 208)
 
 [node name="WoodBoxes" type="Node2D" parent="."]
 

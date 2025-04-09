@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d2wuo1a1bwe3p" path="res://PickableItems/pickable_items.gd" id="1_jq1x4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxq00"]
-size = Vector2(32, 32)
+size = Vector2(16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jq1x4"]
 atlas = ExtResource("1_b240j")

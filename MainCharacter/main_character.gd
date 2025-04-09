@@ -75,5 +75,11 @@ func end_of_tween():
 
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("bomba"):
+	if area.is_in_group("bomb"):
 		print("ma ha dado la bomba")
+	if area.is_in_group("pickable_key"):
+		print("recojo key")
+	if area.is_in_group("pickable_bomb"):
+		print("recojo bomb")
+	if area.is_in_group("portal"):
+		print("he ganado!")

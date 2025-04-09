@@ -25,10 +25,12 @@ window/stretch/mode="viewport"
 
 [global_group]
 
-bomba=""
 personaje=""
 pickable_bomb=""
 pickable_key=""
+level=""
+bomb=""
+portal=""
 
 [input]
 

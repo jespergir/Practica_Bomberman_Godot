@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bapfmayubsoyo"]
+
+[ext_resource type="Texture2D" uid="uid://gec2y1ol7a0f" path="res://Assets/Items/door-closed.png" id="1_oixwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgvv3"]
+size = Vector2(32, 32)
+
+[node name="Portal" type="Area2D" groups=["portal"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hgvv3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oixwc")

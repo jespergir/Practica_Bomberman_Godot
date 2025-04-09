@@ -20,6 +20,7 @@ offset_right = 120.0
 offset_bottom = 56.0
 
 [node name="Label" type="Label" parent="Logo"]
+layout_mode = 0
 offset_top = 3.0
 offset_right = 104.0
 offset_bottom = 35.0
@@ -29,7 +30,6 @@ horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Logo"]
 position = Vector2(23, 36)
-scale = Vector2(1, 1)
 texture = ExtResource("1_ysa24")
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 24)
